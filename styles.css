@@ -1,0 +1,661 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size:15px;
+}
+
+/* Resposive Navbar  */
+
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+   
+   
+}
+
+.brand {
+    width: auto;
+    height: 100%;
+    float: left;
+    margin: 0 0 0 5%;
+}
+
+.menu {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+
+.menu ul {
+    width: 100%;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;    
+    display: -moz-box;       
+    display: -ms-flexbox;    
+    display: -webkit-flex;   
+    display: flex;           
+}
+
+.menu ul a {
+    width: 20%;
+    height: inherit;
+  
+    color: #222;
+    display: inline-block;
+}
+
+.menu ul a:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+#menuToggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu ul {
+        display: block;
+        max-height: 0;
+    	overflow: hidden;
+    	-webkit-transition: max-height 0.3s;
+    	-moz-transition: max-height 0.3s;
+        -ms-transition: max-height 0.3s;
+        -o-transition: max-height 0.3s;
+    	transition: max-height 0.3s;
+    }
+
+    .menu ul a {
+        text-align: left;
+        width: 100%;
+        height: 50px;
+        background-color: black;
+        padding: 10px 0px 10px 5%;
+    }
+
+    .menu-icon {
+        width: 100px;
+        height: inherit;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 60px;
+    }
+
+    #menuToggle:checked ~ ul {
+        max-height: 350px;
+    }
+
+    .menu-icon i {
+        font-size: 1.7em;
+    }
+    
+}
+
+
+
+.background-gray {
+    background-color:gray;
+}
+
+.background-black {
+    background-color: black;
+}
+
+/* .trapezoid {
+	border-bottom: 50px solid red;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 125px;
+    
+} */
+
+/* section-1 start from here */
+
+.section-1 {
+    width:100%;
+    height:85vh;
+    color:red;
+    background-image: url(images/hero-image.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
+.navbar {
+    width: 85%;
+    padding: 2% 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+}
+
+.navbar ul li::after {
+    content: '';
+    height:3px;
+    width:0%;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -10px;
+    transition: 0.3s;
+}
+
+.navbar ul li:hover::after {
+    width: 110%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 110px;
+}
+
+.section-1 button {
+    width: 200px;
+    padding:15px 0;
+    text-align:center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid red;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Section 1 Responsive */
+@media screen and (max-width: 1460px) {
+    .content h1 {      
+        font-size: 80px;
+    }
+
+    .logo {
+        width: 75px;
+        cursor: pointer;
+    }
+
+    .content {
+        top: 40%;
+    }
+
+    .section-1 {
+    height:65vh;
+    }
+}   
+
+@media screen and (max-width: 1120px) {
+    .content h1 {   
+        font-size: 60px;
+    }
+
+    .logo {
+        width: 70px;
+        cursor: pointer;
+    }
+
+    .content {
+        top: 35%;
+    }
+
+    .section-1 {
+        height:60vh;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* .section-1 {
+        width:130%;
+        height:85vh;
+        color:red;
+        background-image: url(images/hero-image.png);
+        background-size: 120%;
+        background-position: center;
+        background-repeat:no-repeat;
+    } */
+
+    .content h1 {   
+        font-size: 40px;
+    }
+
+    .logo {
+        width: 60px;
+        cursor: pointer;
+    }
+
+    .section-1 button {
+        width: 150px;
+        padding:10px 0;
+        margin: 10px 10px;
+    }
+
+    .content {
+        top: 28%;
+    }
+
+    .section-1 {
+        height:50vh;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .content h1 {   
+        font-size: 30px;
+    }
+
+    .logo {
+        width: 40px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        top: 20%;
+    }
+
+    .section-1 {
+        height:30vh;
+    }
+}
+@media screen and (max-width: 389px) {
+    .content h1 {   
+        font-size: 25px;
+    }
+
+    .logo {
+        width: 40px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        top: 15%;
+    }
+
+    .section-1 {
+        height:30vh;
+    }
+}
+
+
+
+/* section 2 start from here */
+
+.section-2 {
+    width:100%;
+    height:100vh;
+    color:red;
+ 
+    background-color:#1b191d;
+    ;
+    /* background-size: cover; */
+    background-position: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+ .section-2 h1 {
+    font-size: 60px;
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+.part-b {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top:40%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.box {
+    flex-basis: 20%;
+}
+
+.box img {
+    margin:20px;
+}
+
+ /* section-2 Responsive */
+
+
+ @media screen and (max-width: 1587px) {
+    .section-2 {      
+        height:75vh;
+    }
+    .section-2 h1 {
+        font-size: 55px;
+        top: 20%;
+    }
+    
+    .part-b {   
+        top:23%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1270px) {
+    .section-2 {      
+        height:70vh;
+    }
+    .section-2 h1 {
+        font-size: 55px;
+        top: 20%;
+    }    
+    .part-b {  
+        top:20%;
+    }
+}
+
+@media screen and (max-width : 1004px){
+    .section-2 {      
+        height:110vh;
+    }
+}
+    
+@media screen and (max-width: 663px) {
+    .section-2 {
+        
+        height:170vh;
+    }
+    .section-2 h1 {
+        font-size: 35px;
+        top: 10%;
+    }
+    
+    .part-b {
+       flex-direction: column;
+        top:10%;
+       
+    }
+}
+
+
+
+
+
+/* section-3 start form here */
+.section-3 {
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.sec-3-box {
+    flex-basis: 50%;
+    /* text-align: left; */
+    /* align-items: left;  */
+}
+
+.sec-3-box div {
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: horizontal;
+    align-items: center; */
+        padding:200px 40px; 
+}
+.sec-3-box div h1{
+    font-size: 80px;
+}
+
+.sec-3-box img {
+    height: 100%;
+    width: 100%;
+    
+} 
+
+.sec-3-box button{
+    background-color: red;
+    width: 120px;
+    height: 40px;
+    border: 0;
+    justify-content: center;
+    text-align: center;
+    margin:20px 0 0 0;
+}
+
+ /* Restonsive Section-3 */
+@media screen and (max-width: 1670px) {
+    .sec-3-box div h1{
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 1483px) {
+    .sec-3-box div h1{
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 1670px) {
+    .sec-3-box div h1{
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 1296px) {
+    .sec-3-box div h1{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 1104px) {
+    .sec-3-box div h1{
+        font-size: 80px;
+    }
+    .section-3 {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .sec-3-box div h1{
+        font-size: 65px;
+    }
+}
+
+
+@media screen and (max-width: 663px) {
+    .sec-3-box div h1{
+        font-size: 40px;
+    }
+    .sec-3-box div {
+        padding:70px 20px; 
+    } 
+}
+
+@media screen and (max-width: 450px) {
+    .sec-3-box div h1{
+        font-size: 30px;
+    }
+}
+
+
+ /* Section-4 Start from here */
+.scetion-4 {
+    display: flex;  
+    flex-wrap: wrap;
+    color: red;
+    background-color: #1e1b1f;
+    text-align: center;
+    align-items: center;
+    
+    padding:80px 0px;
+}
+
+.sec-4-box {
+    flex-basis: 25%;
+}
+
+.sec-4-box:nth-of-type(2) {
+    flex-basis: 50%;
+}
+
+.sec-4-box h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.sec-4-box h2 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.sec-4-box a {
+    font-size: 20px;
+    width:200px;
+    height: 200px;   
+}
+
+.padding-10px {
+    padding:10px
+}
+
+/* Responsive Section-4*/
+
+@media screen and (max-width: 1104px) {
+    .sec-4-box h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sec-4-box h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .sec-4-box h1 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    .sec-4-box h1 {
+        font-size: 15px;
+    }
+}
+
+
+.section-6 {
+    background-image: url(images/h2-background-img-3.jpg);
+    padding:100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat:repeat;
+
+  
+}
+
+.sec-6-inner {
+    background-image: url(images/h2-video-img-1.jpg);
+    width: 50%;
+    height: 100%;
+    background-position: center;
+    background-repeat:no-repeat;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-6 img {
+    display: block;
+}
+
+.section-6 i {
+    width:50%;
+   
+    font-size:180px;
+}
+
+
+
+/* Section-7 Start form here */
+.bottom-menu-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+}
+
+.b-m-b-list {
+    padding: 20px;
+    width: 50px;
+    flex-basis: 16%;
+}
+
+.sec-7-icon {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+ 
+}
+.sec-7-icon i {
+    margin: 15px;
+}
+
+.sec-7-content {
+    padding:30px 50px 10px 50px ;
+}
